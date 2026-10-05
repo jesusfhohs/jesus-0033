@@ -1,0 +1,1 @@
+export { snailpayRoutes } from './charge.routes';

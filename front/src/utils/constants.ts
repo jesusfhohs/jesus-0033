@@ -1,0 +1,4 @@
+export const SALDO_INICIAL = 0;
+export const TOTAL_APUESTAS_INICIAL = 250;
+export const APUESTAS_GANADAS_INICIAL = 150;
+export const APUESTAS_PERDIDAS_INICIAL = 100;

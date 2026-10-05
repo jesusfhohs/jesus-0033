@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f8f9fa;
+  --text: #212529;
+  --text-secondary: #6c757d;
+  --border: #dee2e6;
+  --accent: #2b8cf0;
+  --accent-bg: rgba(43, 140, 240, 0.1);
+  --accent-border: rgba(43, 140, 240, 0.3);
+  --card-bg: #ffffff;
+  --card-border: #e3e6e9;
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #dee2e6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Links y hover states */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1d76bc;
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1d76bc;
+}
+
+.btn-secondary {
+  background: #e9ecef;
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: #dde6ef;
+}
+
+.btn-danger {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+}
+
+/* Sidebar */
+.sidebar {
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+}
+
+.sidebar-link {
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.sidebar-link:hover {
+  color: var(--accent);
+}
+
+/* Header */
+.header {
+  background: var(--sidebar-bg);
+  border-bottom: 1px solid var(--sidebar-border);
+  color: var(--text);
+}
+
+/* Cards de dashboard */
+.dashboard-card {
+  transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Alertas */
+.alert-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+}
+
+.alert-error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+}

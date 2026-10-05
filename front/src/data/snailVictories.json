@@ -1,0 +1,8 @@
+[
+  { "name": "Ruth", "victorias": 1, "color": "#ec4899" },
+  { "name": "Katara", "victorias": 1, "color": "#d946ef" },
+  { "name": "Sokka", "victorias": 2, "color": "#3b82f6" },
+  { "name": "Iris", "victorias": 1, "color": "#f472b6" },
+  { "name": "Jiren", "victorias": 1, "color": "#22c55e" },
+  { "name": "Bills", "victorias": 0, "color": "#f97316" }
+]

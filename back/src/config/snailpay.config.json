@@ -1,0 +1,17 @@
+{
+  "snailpay_enabled": true,
+  "test_cards": [
+    {
+      "number": "1234123412341234",
+      "expiration": "12/26",
+      "cvv": "543",
+      "amount": ""
+    },
+    {
+      "number": "1554155415541554",
+      "expiration": "11/26",
+      "cvv": "456",
+      "amount": "100"
+    }
+  ]
+}
