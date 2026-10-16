@@ -2,15 +2,15 @@
 
 Estas son las instrucciones para el proyecto con sus ambientes correspondientes
 
-### Levantar el proyecto, primero levantamos el back
+### Levantar el proyecto, primero levantamos el backend
 
-Navegar a el back 
+Navegar a el backend
 
 ```bash
-cd back
+cd backend
 ```
 
-Dentro de back duplica .env.example y renombralo a .env
+Dentro de backend duplica .env.example y renombralo a .env
 
 ## Instalar módulos de node
 
@@ -30,11 +30,11 @@ npm install -g yarn
 
 ### Para correr las pruebas:
 
-### Teniendo en cuenta que está arriba el back (en consola se tenga Server running on port 3000) levantamos el front
+### Teniendo en cuenta que está arriba el backend (en consola se tenga Server running on port 3000) levantamos el frontend
 
-### Para eso nos movemos a front
+### Para eso nos movemos a frontend
 ```bash
-cd ../front
+cd ../frontend
 ```
 
 ## Instalar módulos de node
@@ -53,16 +53,16 @@ yarn dev
 
 ## Pruebas (Vitest)
 
-Cada ambiente tiene su propio comando. Primero levantamos las del back:
+Cada ambiente tiene su propio comando. Primero levantamos las del backend:
 
 ```bash
-cd back
+cd backend
 yarn test
 ```
 
-Luego las del front:
+Luego las del frontend:
 
 ```bash
-cd ../front
+cd ../frontend
 yarn test
 ```
