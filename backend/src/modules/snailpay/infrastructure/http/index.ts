@@ -1,1 +1,1 @@
-export { snailpayRoutes } from './charge.routes';
+export { snailpayRoutes } from './charge.routes.js';

@@ -1,2 +1,2 @@
-export * from './greeting.types';
-export * from './snailpay.types';
+export * from './greeting.types.js';
+export * from './snailpay.types.js';

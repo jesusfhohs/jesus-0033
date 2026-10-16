@@ -1,7 +1,7 @@
-import { CardNumber } from '../value-objects/CardNumber';
-import { ExpirationDate } from '../value-objects/ExpirationDate';
-import { CVV } from '../value-objects/CVV';
-import { Amount } from '../value-objects/Amount';
+import { CardNumber } from '../value-objects/CardNumber.js';
+import { ExpirationDate } from '../value-objects/ExpirationDate.js';
+import { CVV } from '../value-objects/CVV.js';
+import { Amount } from '../value-objects/Amount.js';
 
 export interface ChargeProps {
   id: string;
