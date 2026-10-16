@@ -12,6 +12,13 @@
       "expiration": "11/26",
       "cvv": "456",
       "amount": "100"
+    },
+    {
+      "number": "1478147814781478",
+      "expiration": "12/26",
+      "cvv": "456",
+      "amount": "500",
+      "unavailable": true
     }
   ]
 }

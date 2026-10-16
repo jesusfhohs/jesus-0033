@@ -14,6 +14,7 @@ const configSchema = z.object({
       expiration: z.string().regex(/^(0[1-9]|1[0-2])\/\d{2}$/),
       cvv: z.string().length(3),
       amount: z.string(),
+      unavailable: z.boolean().optional(),
     })
   ),
 });

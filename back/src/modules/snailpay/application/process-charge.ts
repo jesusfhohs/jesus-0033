@@ -122,6 +122,10 @@ export class ProcessChargeUseCase {
       return this.buildErrorResponse(input, 'Datos de tarjeta inválidos', 'rejected');
     }
 
+    if (matchedCard.unavailable) {
+      return this.buildErrorResponse(input, 'Sistema de pagos no disponible', 'error');
+    }
+
     const cardLimit = matchedCard.amount;
     if (cardLimit !== '' && input.amount > Number(cardLimit)) {
       return this.buildErrorResponse(input, 'Saldo Insuficiente', 'rejected');

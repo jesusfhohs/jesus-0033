@@ -11,6 +11,13 @@ const CONFIG: SnailPayConfig = {
   test_cards: [
     { number: '1234123412341234', expiration: '12/26', cvv: '543', amount: '' },
     { number: '1554155415541554', expiration: '11/26', cvv: '456', amount: '100' },
+    {
+      number: '1478147814781478',
+      expiration: '12/26',
+      cvv: '456',
+      amount: '500',
+      unavailable: true,
+    },
   ],
 };
 
@@ -169,5 +176,26 @@ describe('ProcessChargeUseCase - recarga del monto enviado desde el front', () =
     expect(result.status).toBe('error');
     expect(result.status_detail).toBe('Sistema de pagos no disponible');
     expect(result.transaction_amount).toBe(300);
+  });
+
+  it('devuelve error con la tarjeta marcada como no disponible', async () => {
+    const result = await createUseCase(CONFIG).execute(
+      buildInput({
+        cardNumber: '1478 1478 1478 1478',
+        expiration: '12/26',
+        cvv: Buffer.from('456', 'utf-8').toString('base64'),
+        amount: 500,
+      })
+    );
+
+    expect(result.status).toBe('error');
+    expect(result.status_detail).toBe('Sistema de pagos no disponible');
+    expect(result.transaction_amount).toBe(500);
+  });
+
+  it('sigue aprobando las otras tarjetas cuando una está marcada no disponible', async () => {
+    const result = await createUseCase(CONFIG).execute(buildInput({ amount: 50 }));
+
+    expect(result.status).toBe('approved');
   });
 });
